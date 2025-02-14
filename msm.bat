@@ -1,7 +1,7 @@
 @echo off
 echo Launching MySingingMonsters on BlueStacks...
 :: Change the path below to match your BlueStacks installation
-start "" "C:\Program Files\BlueStacks_nxt\HD-Player.exe" --instance "Android11_24" --cmd launchApp --package "com.bigbluebubble.singingmonsters.full"  :: put both YOUR bs location and instance number with the same format
+start "" "C:\Program Files\BlueStacks_nxt\HD-Player.exe" --instance "Android11_24" --cmd launchApp --package "com.bigbluebubble.singingmonsters.full"  # put both YOUR bs location and instance number with the same format
 echo Launcher executed. If the game doesn't start, please check the paths and package name.
 echo Waiting for BlueStacks to launch...
 timeout /t 5 /nobreak > nul
