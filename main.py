@@ -11,7 +11,7 @@ import datetime
 import time
 
 RESTART_INTERVAL = 2000
-HIBERNATION_INTERVAL = 2000  # not 1.5 hours in seconds
+# HIBERNATION_INTERVAL = 2000  # not 1.5 hours in seconds
 
 def restart_pc():
     print("Restarting the PC...")
@@ -21,15 +21,15 @@ def restart_pc():
         os.system('sudo shutdown -r now')
 
 
-def hibernate_pc():
-    if os.name == 'nt':  # Windows
-        os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
-    else:  # Linux and macOS
-        os.system("systemctl suspend")
+# def hibernate_pc():
+#     if os.name == 'nt':  # Windows
+#         os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
+#     else:  # Linux and macOS
+#         os.system("systemctl suspend")
 
 # Define the hour at which the script should shut down (24-hour format)
-SHUTDOWN_HOUR = 3  # For example, 10 PM
-SHUTDOWN_HOUR_END = 4
+SHUTDOWN_HOUR = 1  # For example, 10 PM
+SHUTDOWN_HOUR_END = 4  # This doesnt matter but should be less than when you wake up on BIOS
 
 
 def check_shutdown_time():
@@ -41,11 +41,9 @@ def check_shutdown_time():
     return False
 
 # Constants
-ITERATIONS_BEFORE_SHUTDOWN = 100  # Adjust this number as needed
-COOLDOWN_TIME = 3600  # 1 hour in seconds, adjust as needed
-# CODE BY ADRIAN MONTES
-#pip install pyautogui
-#pip install opencv_python
+# ITERATIONS_BEFORE_SHUTDOWN = 100  # Adjust this number as needed
+# COOLDOWN_TIME = 3600  # 1 hour in seconds, adjust as needed
+
 
 """got a collect key"""
 #close notification
@@ -57,7 +55,11 @@ COOLDOWN_TIME = 3600  # 1 hour in seconds, adjust as needed
 #if not already in game open it from desktop else throw error
 
 # isFoodCollected = False
-waitingTime = 4;
+waitingTime = 4;  # dont ask me i was drunk
+
+
+
+# Why did i put a default value on confidence i should clean it put before long
 
 def findClick(image : str, time = .5, confidence = .86) -> None:
     """Given an image will click on the centered location
@@ -123,6 +125,7 @@ def mirrorSwitch(maps = 0):
     findClick(MAP)
     findClick(MIRROR)
 
+# THats dumb
 def collectAll():
     """Finds and clicks on CollectAll, Confirm, then looks for gems"""
     findClick(COLLECT, confidence = .7)
@@ -139,7 +142,7 @@ def collectAll():
         sleep(1.5)
         findClick(COLLECTNEXUS, confidence = .7)
 
-    
+    # Working -ish  it sees more than there really are probably because of many consecutives frames^^???
 def collectFood():
     """Collects all the food available on screen until no more is found (recursive)"""
     try:
@@ -171,6 +174,8 @@ def rebake():
     findClick(CONFIRM)
     sleep(1.5)
     
+
+    # HARDCODED BECAUSE THEY CHANGED THE FRIKKIBG MAP
 def changeMap(curr_map = 0):
     """Navigates through all islands in My Singing Monsters"""
     
@@ -353,7 +358,7 @@ def changeMap(curr_map = 0):
 
 
 
-timeUntillRetry = 60 * 10
+timeUntillRetry = 60 * 10  # 10 minutes if you cant do math THIS IS IF YOU WANT TO PLAY WHILE LEAVING THE BOT ON , it will resume after 10 minutes that you played ( tested on phone ipad doesnt work idk add some images if needed)
 
 def retry():
     done = 0
@@ -388,7 +393,7 @@ def retry():
         
  
 
-    
+    # auto close notis and stuff if detected so it doesnt ruin the whole point of the bot
 def closeNoti():
 
    
@@ -412,6 +417,7 @@ def shutdown_pc():
     else:  # For Unix-based systems
         os.system('sudo shutdown -h now')
 
+# ITS a mess sorry i use it for auto breeding the celestials, wubbox etc dont change if you dont understand
 def breed(order = 1, nobreed = 0):
     if isOnScreen(BREED, confidence = .7) and nobreed == 0:
         findClick(BREED, confidence = .7)
@@ -550,7 +556,7 @@ def hatch(nohatch = 0):
         sleep(3)
         return nohatch
     return nohatch
-
+# Self explanatory
 def conundrum():
     if isOnScreen(CONUNDRUM, confidence = .75):
         print("Conundruming...")
@@ -563,6 +569,7 @@ def conundrum():
         findClick(CLOSE, confidence = .75)
         sleep(3)
 
+# OK
 def countingStars():
     breed_locations = locateAllOnScreen(BREED, confidence=0.76)
 
@@ -580,7 +587,7 @@ def countingStars():
 
     print(f"Number of BREED occurrences found: {number_of_breeds}")
 
-
+# Not working on jackpots add the images if you hit it alr.
 def spin():
 
     if isOnScreen(SPIN, confidence = 0.7):
@@ -605,7 +612,7 @@ def main():
     print("started")
     #keyboard.press_and_release("alt+tab")
     if isOnScreen(COLLECTALL, confidence = .7) or isOnScreen(CLOSE, confidence = .7):
-        print("alr")
+        print("You already started the game so theres no need to wait for bluestack to finish loadin")
     else:
         print("Loading...")
         sleep(46)
@@ -619,7 +626,7 @@ def main():
     iteration_count = 0
     start_time = time.time()
 
-    print("done pla6")
+    print("Loaded.")
     
     current_map = 0;  # 0 plant etc...
     
@@ -655,7 +662,7 @@ def main():
 
         
 
-
+        #Get out of interface of whatever
         moveTo(1000, 500)
         keyDown('down')
         sleep(2)
@@ -686,8 +693,7 @@ def main():
 
         print("map changed")
 
-
-        
+# we check time so we can turn off at night 
 
         current_time = time.time()
         if current_time - start_time >= RESTART_INTERVAL:
