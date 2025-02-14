@@ -6,7 +6,7 @@ BEWARE ! if you dont know anything about python or programming and expect this t
 ## Version
 ### - 1.6
 Fine tuned everything the only problem right now is finding images or confidence that works on different devices ? (pc) Maybe i should make it always open the game on fullscreen so the resolution should be equal on all?
-
+After that everything should work for ever, the only obstacle is the game updates that changes the font used on text and the images changing or map changing.
 ## TODO
 - [ ] Ask something.
 
