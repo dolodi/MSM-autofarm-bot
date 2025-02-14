@@ -1,6 +1,8 @@
 # MySingingMonstersAutoBot
 Get tired of collecting your gold and shards from your monsters? Run this bot to collect your gold while you're AFK.
 
+BEWARE ! if you dont know anything about python or programming and expect this to work out of the box.
+
 ## Version
 ### - 1.6
 Changed the collect food function to collect more efficiently.
