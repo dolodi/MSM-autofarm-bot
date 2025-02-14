@@ -6,9 +6,8 @@ Getting tired of collecting your gold and shards from your monsters, run this bo
 Changed the collect food function to collect more efficeintly.
 
 ## TODO
-- [ ] Make islands Avoidable.
-- [ ] Figure out minimum version of python needed to run.
-- [ ] Implement mirror island accessablility.
+- [ ] Ask something.
+
 
 ## How To
 Download Python, don't know which version minimum, latest works.
