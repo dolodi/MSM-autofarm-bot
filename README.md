@@ -22,6 +22,7 @@ Alt + Tab into MySingingMonsters and let it run 😀
 ### Initial Setup
 1. Download and install Python from the official website.
 2. Open your terminal and install the required packages by running the appropriate commands.
+3. Install inside the bluestack instance you use my singing monster.
 
 ### Configuration Steps
 1. **Photos of Buttons etc**: Update the photos of individual buttons as needed for your specific setup.
