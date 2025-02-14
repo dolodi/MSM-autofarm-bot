@@ -5,7 +5,7 @@ BEWARE ! if you dont know anything about python or programming and expect this t
 
 ## Version
 ### - 1.6
-Changed the collect food function to collect more efficiently.
+Fine tuned everything the only problem right now is finding images or confidence that works on different devices ? (pc) Maybe i should make it always open the game on fullscreen so the resolution should be equal on all?
 
 ## TODO
 - [ ] Ask something.
