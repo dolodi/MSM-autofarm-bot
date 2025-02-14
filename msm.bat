@@ -10,7 +10,8 @@ echo Focusing on BlueStacks window...
 cscript //nologo "%~f0?.wsf" //job:Focus
 echo Launcher executed. BlueStacks window should now be in focus.
 echo Changing directory to the bot location...
-cd /d C:\Users\matte\Desktop\MySingingMonstersAutoBot-main   :: Put YOUR own directory to the main.py
+:: Put YOUR own directory to the main.py
+cd /d C:\Users\matte\Desktop\MySingingMonstersAutoBot-main   
 echo Starting the bot script...
 py main.py
 echo Bot script has finished executing.
