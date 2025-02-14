@@ -26,7 +26,7 @@ Alt + Tab into MySingingMonsters and let it run 😀
 ### Configuration Steps
 1. **Photos of Buttons etc**: Update the photos of individual buttons as needed for your specific setup.
 2. **Shutdown Timing**: Adjust the values for when the system should turn off to match your preferences.
-3. **BIOS Settings**: Enable the hours you want the system to turn on in your BIOS settings. For example, set it to turn on at 7 AM and turn off at 2 AM, allowing 5 hours of cooldown.
+3. **BIOS Settings**: Enable the hours you want the system to turn on in your BIOS settings. For example, set it to turn on at 7 AM and turn off at 2 AM (in the main.py), allowing 5 hours of cooldown.
 4. **Autorun on Startup**:
    - Press the Windows key + R to open the Run dialog.
    - Type `shell:startup` and press Enter to open the Startup folder.
