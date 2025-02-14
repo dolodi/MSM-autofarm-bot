@@ -1,5 +1,5 @@
 # MySingingMonstersAutoBot
-Get tired of collecting your gold and shards from your monsters? Run this bot to collect your gold while you're AFK.
+Get tired of collecting your gold and shards from your monsters? Run this bot to collect your gold while you're AFK. This cant be virtualized because we are using bluestack already, at least its not reccomended.
 
 BEWARE ! if you dont know anything about python or programming and expect this to work out of the box.
 
