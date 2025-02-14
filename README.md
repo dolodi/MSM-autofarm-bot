@@ -10,6 +10,20 @@ Changed the collect food function to collect more efficiently.
 ## TODO
 - [ ] Ask something.
 
+## Features
+1. Auto collect coins.
+2. Auto collect diamons (mines monsters whatever)
+3. Auto collect food.
+4. Auto collect daily rewards
+5. Auto collect conundrum.
+6. Auto reconnect if you play on phone so you dont have to manually re run it.
+7. Auto close popups like events and whatever.
+8. Auto collects relics or what their called.
+9. Auto breed and auto hatch but need to be improved logically, its hard to use if you dont understand it.
+10. Auto collect shards.
+11. Auto collect tribal rewards.
+12. Auto collect nexus (useless now because the rewards are so low)
+
 ## How To
 1. Download Python (latest version recommended).
 2. Open terminal and install the required dependencies.
